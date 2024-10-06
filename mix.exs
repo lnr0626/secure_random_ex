@@ -23,7 +23,7 @@ defmodule SecureRandom.Mixfile do
   defp package do
     [
       maintainers: ["Lloyd Ramey"],
-      licenses: ["Apache 2.0"],
+      licenses: ["Apache-2.0"],
       links: %{github: "https://github.com/lnr0626/secure_random_ex"}
     ]
   end
@@ -39,6 +39,7 @@ defmodule SecureRandom.Mixfile do
   # Type `mix help deps` for more examples and options
   def deps do
     [
+      {:dialyxir, "~> 1.4", only: :dev, runtime: false},
       {:earmark, "~> 1.4", only: :dev},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
