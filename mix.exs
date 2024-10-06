@@ -2,11 +2,11 @@ defmodule SecureRandom.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :secure_random,
-     version: "0.5.1",
+    [app: :secure_random_ex,
+     version: "0.6.0",
      elixir: "~> 1.14",
      deps: deps(),
-     description: "A convienance library based on Ruby's SecureRandom",
+     description: "A convienance library based on Ruby's SecureRandom, forked from secure_random",
      package: package()
     ]
   end
@@ -19,9 +19,9 @@ defmodule SecureRandom.Mixfile do
   end
 
   defp package do
-    [maintainers: ["Patrick Robertson"],
+    [maintainers: ["Lloyd Ramey"],
      licenses: ["Apache 2.0"],
-     links: %{github: "https://github.com/patricksrobertson/secure_random.ex"}]
+     links: %{github: "https://github.com/lnr0626/secure_random_ex"}]
   end
 
   # Dependencies can be Hex packages:
