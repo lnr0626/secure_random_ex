@@ -4,7 +4,7 @@ defmodule SecureRandom.Mixfile do
   def project do
     [app: :secure_random,
      version: "0.5.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.14",
      deps: deps(),
      description: "A convienance library based on Ruby's SecureRandom",
      package: package()
@@ -34,7 +34,7 @@ defmodule SecureRandom.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   def deps do
-    [{:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.11", only: :dev}]
+    [{:earmark, "~> 1.4", only: :dev},
+     {:ex_doc, "~> 0.34", only: :dev}]
   end
 end
