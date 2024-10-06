@@ -6,6 +6,7 @@ defmodule SecureRandom.Mixfile do
       app: :secure_random_ex,
       version: "0.6.0",
       elixir: "~> 1.14",
+      start_permanent: Mix.env() == :prod,
       deps: deps(),
       description:
         "A convienance library based on Ruby's SecureRandom, forked from secure_random",
@@ -17,7 +18,7 @@ defmodule SecureRandom.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :crypto]]
+    [extra_applications: [:logger, :crypto]]
   end
 
   defp package do
@@ -39,9 +40,7 @@ defmodule SecureRandom.Mixfile do
   # Type `mix help deps` for more examples and options
   def deps do
     [
-      {:dialyxir, "~> 1.4", only: :dev, runtime: false},
-      {:earmark, "~> 1.4", only: :dev},
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.34", only: :dev, runtime: false},
     ]
   end
 end

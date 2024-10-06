@@ -1,22 +1,4 @@
 defmodule SecureRandom do
-  @moduledoc """
-  Takes my favorite hits from Ruby's SecureRandom and brings em to elixir.
-  Mostly a convienance wrapper around Erlangs Crypto library, converting
-  Crypto.strong_rand_bytes/1 into a string.
-
-  ## Examples
-
-      iex> SecureRandom.base64
-      "xhTcitKZI8YiLGzUNLD+HQ=="
-
-      iex> SecureRandom.urlsafe_base64(4)
-      "pLSVJw"
-
-      iex> SecureRandom.uuid
-      "a18e8302-c417-076d-196a-71dfbd5b1e03"
-
-  """
-
   @default_length 16
 
   @doc """
